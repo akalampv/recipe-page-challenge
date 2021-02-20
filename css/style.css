@@ -1,0 +1,208 @@
+/************************************************ VARIABLES ***********************************************************/
+/**********************************************************************************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: calc(100% * (10 / 16)); }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 25em) {
+    html {
+      font-size: 40%; } }
+
+body {
+  padding: 5rem 23rem 2.4rem;
+  background-color: #fff; }
+  @media only screen and (max-width: 75em) {
+    body {
+      padding: 5rem 10rem 2.4rem; } }
+  @media only screen and (max-width: 31.25em) {
+    body {
+      padding: 5rem 2rem 2.4rem; } }
+
+/************************************************ HEADER **************************************************************/
+.header {
+  margin-bottom: 4rem; }
+  .header__heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 6.4rem;
+    color: #000;
+    margin-bottom: 1.2rem; }
+  .header__text-box {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 4rem; }
+  .header__text-img {
+    margin-right: 1rem; }
+  .header__text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #4f4f4f; }
+  .header__img {
+    max-width: 100%;
+    height: auto; }
+
+/**********************************************************************************************************************/
+/************************************************ MAIN ****************************************************************/
+.main {
+  display: flex;
+  align-items: flex-start; }
+  @media only screen and (max-width: 56.25em) {
+    .main {
+      flex-direction: column; } }
+  .main__aside {
+    border-radius: 12px;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+    padding: 6rem 4rem;
+    order: 2; }
+    @media only screen and (max-width: 56.25em) {
+      .main__aside {
+        order: -1;
+        box-shadow: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+        gap: 3rem;
+        justify-content: flex-start; } }
+    .main__aside-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; }
+      .main__aside-item:not(:last-child) {
+        margin-bottom: 4rem; }
+        @media only screen and (max-width: 56.25em) {
+          .main__aside-item:not(:last-child) {
+            margin-bottom: 0;
+            margin-right: 4rem; } }
+      .main__aside-item:first-child {
+        flex: 100%; }
+    .main__aside-icon {
+      width: 3rem;
+      height: 3rem;
+      fill: #4f4f4f;
+      margin-right: 1rem; }
+      .main__aside-icon--orange {
+        fill: #f2994a; }
+    .main__aside-text {
+      font-family: 'Montserrat', sans-serif; }
+    .main__aside-name {
+      color: #bdbdbd;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      text-transform: uppercase; }
+    .main__aside-value {
+      color: #333;
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.7rem; }
+      .main__aside-value--orange {
+        color: #f2994a; }
+  .main__sections {
+    flex: 1;
+    margin-right: 15rem; }
+    @media only screen and (max-width: 56.25em) {
+      .main__sections {
+        flex: 0;
+        margin-right: 0; } }
+
+/**********************************************************************************************************************/
+/************************************************ INGREDIENTS *********************************************************/
+.ingredients {
+  color: #333;
+  margin-bottom: 3rem; }
+  .ingredients > *:not(:last-child) {
+    margin-bottom: 3rem; }
+  .ingredients__heading-2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.2rem; }
+  .ingredients__heading-3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.4rem; }
+  .ingredients__item {
+    display: flex;
+    align-items: baseline; }
+  .ingredients__checkbox {
+    margin-right: 1.5rem; }
+  .ingredients__label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    display: inline-block; }
+    .ingredients__label span {
+      font-weight: 700; }
+
+/**********************************************************************************************************************/
+/************************************************ INSTRUCTIONS ********************************************************/
+.instructions {
+  margin-bottom: 6rem; }
+  .instructions > *:not(:last-child) {
+    margin-bottom: 3rem; }
+  .instructions__heading-2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.2rem; }
+  .instructions__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start; }
+  .instructions__number {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color: #fff;
+    background-color: #f2994a;
+    margin-right: 1.5rem;
+    flex: 0 0 3.6rem;
+    height: 3.6rem;
+    text-align: center;
+    border-radius: 6px; }
+  .instructions__text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000; }
+    .instructions__text span {
+      font-weight: 700; }
+
+/**********************************************************************************************************************/
+/************************************************ SOURCE **************************************************************/
+.source {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #bdbdbd; }
+
+/**********************************************************************************************************************/
+/************************************************ FOOTER **************************************************************/
+.footer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: #828282;
+  text-align: center;
+  margin-top: 9rem; }
+
+/**********************************************************************************************************************/

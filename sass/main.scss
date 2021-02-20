@@ -1,0 +1,300 @@
+/************************************************ VARIABLES ***********************************************************/
+$color-white: #fff;
+$color-black: #000;
+$color-orange: #f2994a;
+$color-grey-1: #333;
+$color-grey-2: #4f4f4f;
+$color-grey-3: #828282;
+$color-grey-4: #bdbdbd;
+
+$bp-large: 75em;
+$bp-medium: 56.25em;
+$bp-small: 31.25em;
+$bp-nano: 25em;
+/**********************************************************************************************************************/
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: calc(100% * (10 / 16));
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-nano) {
+    font-size: 40%;
+  }
+}
+
+body {
+  padding: 5rem 23rem 2.4rem;
+  background-color: $color-white;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 5rem 10rem 2.4rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem 2rem 2.4rem;
+  }
+}
+
+/************************************************ HEADER **************************************************************/
+.header {
+  margin-bottom: 4rem;
+
+  &__heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 6.4rem;
+    color: $color-black;
+    margin-bottom: 1.2rem;
+  }
+
+  &__text-box {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 4rem;
+  }
+
+  &__text-img {
+    margin-right: 1rem;
+  }
+
+  &__text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: $color-grey-2;
+
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/**********************************************************************************************************************/
+
+/************************************************ MAIN ****************************************************************/
+.main {
+  display: flex;
+  align-items: flex-start;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+
+  &__aside {
+    border-radius: 12px;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .1);
+    padding: 6rem 4rem;
+    order: 2;
+
+    @media only screen and (max-width: $bp-medium) {
+      order: -1;
+      box-shadow: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+      gap: 3rem;
+      justify-content: flex-start;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+
+        @media only screen and (max-width: $bp-medium) {
+          margin-bottom: 0;
+          margin-right: 4rem;
+        }
+      }
+
+      &:first-child {
+        flex: 100%;
+      }
+    }
+
+    &-icon {
+      width: 3rem;
+      height: 3rem;
+      fill: $color-grey-2;
+      margin-right: 1rem;
+
+      &--orange {
+        fill: $color-orange;
+      }
+    }
+
+    &-text {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    &-name {
+      color: $color-grey-4;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    &-value {
+      color: $color-grey-1;
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+
+      &--orange {
+        color: $color-orange;
+      }
+    }
+  }
+
+  &__sections {
+    flex: 1;
+    margin-right: 15rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex: 0;
+      margin-right: 0;
+    }
+  }
+}
+/**********************************************************************************************************************/
+
+/************************************************ INGREDIENTS *********************************************************/
+.ingredients {
+  color: $color-grey-1;
+  margin-bottom: 3rem;
+
+  & > *:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  &__heading-2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+
+  &__heading-3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  &__form {
+
+  }
+
+  &__item {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__checkbox {
+    margin-right: 1.5rem;
+  }
+
+  &__label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    display: inline-block;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+/**********************************************************************************************************************/
+
+/************************************************ INSTRUCTIONS ********************************************************/
+.instructions {
+  margin-bottom: 6rem;
+
+  & > *:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  &__heading-2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+  }
+
+  &__number {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color: $color-white;
+    background-color: $color-orange;
+    margin-right: 1.5rem;
+    flex: 0 0 3.6rem;
+    height: 3.6rem;
+    text-align: center;
+    border-radius: 6px;
+  }
+
+  &__text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $color-black;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+/**********************************************************************************************************************/
+
+/************************************************ SOURCE **************************************************************/
+.source {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: $color-grey-4;
+}
+/**********************************************************************************************************************/
+
+/************************************************ FOOTER **************************************************************/
+.footer {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: $color-grey-3;
+  text-align: center;
+  margin-top: 9rem;
+}
+/**********************************************************************************************************************/
